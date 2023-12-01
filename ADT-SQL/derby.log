@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Nov 24 17:42:28 CET 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018c-0236-16bd-00000f400000 
+on database directory C:\Users\Tarde\BBDD_ADT\ejemplo with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0 
+Loaded from file:/C:/Users/Tarde/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.8.1+1
+user.dir=C:\Users\Tarde\eclipse-workspace\ADT-SQL
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
