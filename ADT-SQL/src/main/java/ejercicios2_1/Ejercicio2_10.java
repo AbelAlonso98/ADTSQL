@@ -40,7 +40,7 @@ public class Ejercicio2_10 {
 				String sql = String.format("SELECT COUNT(*) FROM DEPARTAMENTOS WHERE DEPT_NO = %s", dept_no);
 				ResultSet rs = sentencia.executeQuery(sql);
 				rs.next();
-				if (rs.getInt(0) == 0) {
+				if (rs.getInt(1) == 0) {
 					System.err.printf("No existe el departamento: %d%n", dept_no);
 					System.exit(0);
 				}
@@ -48,7 +48,7 @@ public class Ejercicio2_10 {
 				sql = String.format("SELECT COUNT(*) FROM EMPLEADOS WHERE DIR = %s", dir);
 				rs = sentencia.executeQuery(sql);
 				rs.next();
-				if (rs.getInt(0) == 0) {
+				if (rs.getInt(1) == 0) {
 					System.err.printf("No existe el director: %d%n", dir);
 					System.exit(0);
 				}
@@ -66,14 +66,14 @@ public class Ejercicio2_10 {
 				sql = String.format("SELECT COUNT(*) FROM EMPLEADOS WHERE EMP_NO = %s", emp_no);
 				rs = sentencia.executeQuery(sql);
 				rs.next();
-				if (rs.getInt(0) > 0) {
+				if (rs.getInt(1) > 0) {
 					System.err.printf("Ya existe el empleado: %d%n", emp_no);
 					System.exit(0);
 				}
 
 				// ========= Si todas las comprobaciones son correctas =========
-				sql = String.format("INSERT INTO departamentos VALUES (%d, '%s', '%s', '%s', '%d', '%d', '%d', '%t')",
-						emp_no, apellido, oficio, dir, LocalDate.now(), salario, comision, dept_no);
+				sql = String.format("INSERT INTO empleados VALUES (%d, '%s', '%s', '%s', '%s', '%d', '%d', '%d')",
+						emp_no, apellido, oficio, dir, LocalDate.now().toString(), salario, comision, dept_no);
 				System.out.println("Parametros correctos, ejecutando:");
 				System.out.println(sql);
 
